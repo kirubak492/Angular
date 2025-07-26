@@ -1,0 +1,34 @@
+<h1 [innerText]="title"></h1>
+
+<button [innerText]="click" [disabled]="isdisabled" (click)="count()"></button>
+
+<input type="text" (input)="handleInput($event)">
+{{inputValue}}
+
+<input [(ngModel)]="ngModelvalue">
+{{ngModelvalue}}
+
+
+<div>
+    <div>
+        <table>
+            <tr>
+                <th>S.no</th>
+                <th>movie name</th>
+                <th>hero</th>
+                <th>director</th>
+                <th>release date</th>
+            </tr>
+            <tr 
+            [ngClass]='{"bg-warning":f,"bg-info":l}'
+            *ngFor="let movie of movieList ; let i=index ; let o=odd ; let e=even;let f=first;let l=last">
+                <td>{{i+1}}</td>
+                <td> {{movie.title}}</td>
+                <td> {{movie.hero}}</td>
+                <td> {{movie.director}}</td>
+                <td> {{movie.release_date}}</td>
+            </tr>
+
+        </table>
+    </div>
+</div>
