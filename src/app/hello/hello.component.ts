@@ -75,4 +75,19 @@ export class HelloComponent {
     "release_date": "2021-10-09"
   }
   ]
+
+  num=0
+  
+
+  showMe=true
+
+  enableGreen=false
+
+  enableBig=false
+
+  enableItalic=false
+
+  toDate=new Date()
+
+  word="Hello , Welcome to Angular"
 }

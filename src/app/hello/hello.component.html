@@ -7,8 +7,8 @@
 
 <input [(ngModel)]="ngModelvalue">
 {{ngModelvalue}}
-
-
+<br>
+<!-- table -->
 <div>
     <div>
         <table>
@@ -32,3 +32,46 @@
         </table>
     </div>
 </div>
+
+
+<!-- ngSwitch -->
+input Type<input type="text" [(ngModel)]="num">
+<div [ngSwitch]="+num">
+<div *ngSwitchCase="1">one</div>
+<div *ngSwitchCase="2">two</div>
+<div *ngSwitchCase="3">three</div>
+<div *ngSwitchCase="4">four</div>
+
+</div>
+
+
+<!-- ngIf -->
+<p>NgIf Example</p>
+<label for=""> checkbox <input type="checkbox" [(ngModel)]="showMe"></label>
+
+<br>
+{{showMe}}
+<p *ngIf="showMe">show Me is checked</p>
+<p *ngIf="!showMe">show Me is Unchecked</p>
+
+
+
+<!-- ngClass -->
+<div [ngClass]="['primary','big']">
+sample Text1
+</div>
+<label for="">Green<input type="checkbox" [(ngModel)]="enableGreen"></label>
+<label for="">Big<input type="checkbox" [(ngModel)]="enableBig"></label>
+<label for="">Italic<input type="checkbox" [(ngModel)]="enableItalic"></label>
+<div [ngClass]="{'secondary':enableGreen,'big':enableBig,'italic':enableItalic}">
+<p>sample Text</p>
+</div>
+
+<!-- Pipe operator -->
+
+<p>Unformatted date {{toDate}}</p>
+<p>formatted date {{toDate|date}}</p>
+
+<p>original {{word}}</p>
+<p>upper {{word|lowercase}}</p>
+<p>lower {{word|uppercase}}</p>

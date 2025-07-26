@@ -1,3 +1,22 @@
-h1{
+
+.primary{
     color: red;
+}
+
+.secondary{
+    color: green;
+
+}
+.big{
+    font-size: 36px;
+}
+.small{
+    font-size: 12px;
+}
+.italic{
+    font-style: italic;
+}
+
+.is-active{
+    font-weight: bolder;
 }
