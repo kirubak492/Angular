@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+
+  title1:String=''
+  title2:String []=[]
+
+  titleAdded(){
+    this.title2.push(this.title1)
+  }
 }

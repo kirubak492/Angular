@@ -1,5 +1,9 @@
 <h2>App Component</h2>
 
-
+<input type="text" [(ngModel)]="title1">
+<button (click)="titleAdded()">submit</button>
 
 <app-list></app-list>
+
+
+<app-heading [text]="title2"></app-heading>
