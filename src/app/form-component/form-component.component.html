@@ -1,11 +1,25 @@
 <p>form-component works!</p>
 
 <div class="container">
-{{contact.firstName}}
-<form #contactForm="ngForm" (submit)="onSubmit(contactForm)"> 
+
+<form #contactForm="ngForm" (submit)="onSubmit(contactForm)" ngNativeValidate> 
     <p>
         <label for="firstName">Firstname</label>
-        <input type="text" id="firstname" name="firstName" [(ngModel)]="contact.firstName">
+        <input type="text" id="firstname" #firstName="ngModel"name="firstName" [(ngModel)]="contact.firstName" required minlength="6" maxlength="10" pattern="^[a-zA-Z]+$">
+        <span *ngIf="!firstName.valid && firstName.touched">
+        <span class ="text-danger"*ngIf="firstName.errors?.['required']">
+            Firstname is required
+        </span>
+        <span class ="text-danger"*ngIf="firstName.errors?.['pattern']">
+            allow only letters
+        </span>
+        <span class ="text-danger"*ngIf="firstName.errors?.['minlength']">
+           minimum length should be 6
+        </span>
+        <span class ="text-danger"*ngIf="firstName.errors?.['maxlength']">
+           max length should be 10
+        </span>
+        </span>
     </p>
     <p>
         <label for="lastName">lastName</label>
@@ -44,7 +58,7 @@
         </select>
     </p>
 
-    <p><button type="submit" >submit</button></p>
+    <p><button type="submit" [disabled]="!contactForm.valid">submit</button></p>
 </form>
 
 </div>

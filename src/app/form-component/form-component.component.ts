@@ -19,9 +19,9 @@ export class FormComponentComponent {
   contact!:Contact;
   ngOnInit():void{
     this.contact={
-      firstName:"kiruba",
-      lastName:"k",
-      mail:"dfgh@fg",
+      firstName:"",
+      lastName:"krihsna",
+      mail:"kirubak492@gmail.com",
       gender:"male",
       country:"2",
       address:{
