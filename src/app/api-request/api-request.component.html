@@ -1,0 +1,22 @@
+<h2><p>api-request works!</p></h2>
+
+
+<h2>User List</h2>
+
+<h3>Add User</h3>
+<div class="container">
+    <form [formGroup]="userForm" method="post" (submit)="onSubmit()">
+    <label>name
+        <input type="text" class="from-control" formControlName="name">
+    </label>
+    <label>email
+        <input type="text" class="from-control" formControlName="email">
+    </label>
+    <button type="submit">submit</button>
+    </form>
+</div>
+
+<ul>
+    <li *ngFor="let user of userList">{{user.name }}| {{user.email}} </li>
+    
+</ul>

@@ -10,7 +10,8 @@ import { ListComponent } from './list/list.component';
 import { HeadingComponent } from './heading/heading.component';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-
+import { ApiRequestComponent } from './api-request/api-request.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +20,15 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     ListComponent,
     HeadingComponent,
     FormComponentComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ApiRequestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

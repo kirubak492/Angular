@@ -17,7 +17,7 @@ export class HelloComponent {
   isdisabled=false;
   value=0;
 
-  //ngModel
+  //ngModel two way binding
   ngModelvalue=''
 
   //event binding
